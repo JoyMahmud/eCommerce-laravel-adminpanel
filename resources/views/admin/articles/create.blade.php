@@ -1,0 +1,1 @@
+G:\xampp\htdocs\flower\app/views/articles/create.blade.php

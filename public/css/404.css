@@ -1,0 +1,304 @@
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+.underline{	padding-bottom:5px;	border-bottom: 1px solid #eee; margin:0 0 20px 0;}/* Add 5px bottom padding and a underline */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+body{
+	font-family: "Century Gothic" Helvetica, sans-serif;
+	background-size:50px 50px;
+	background: url('../images/bg.png') center 0;
+}
+.wrap{
+	margin:0 auto; 
+	width: 96%;
+}
+.main{
+	text-align:center;
+	margin:4% 0 0%;
+}
+h1{
+	font-family: 'Condiment', cursive;
+	margin-top:20px;
+	color: #EA3C4D;
+	font-size: 2.4em;
+	text-transform:capitalize;
+	font-weight: bold;
+}
+p{
+	color:#999;
+	font-size: 0.9em;
+	line-height: 1.8em;
+}
+/*footer*/
+.footer{
+	font-family: "Century Gothic";
+	position: absolute;
+	right: 20px;
+	bottom:20px;
+}
+.footer p{
+	font-size:1em;
+	color: #999;
+}
+.footer a{
+	color: #EA3C4D;
+}
+.footer a:hover{
+	text-decoration:underline;
+}
+/*media queries*/
+@media all and (max-width:1366px) and (min-width:1280px){
+	.wrap{
+		width: 90%;
+	}
+}
+@media all and (max-width:1280px) and (min-width:1024px){
+.wrap{
+	width: 90%;
+}
+.page{
+	font-size:1.4em;
+}
+}	
+@media all and (max-width:1024px) and (min-width:800px){
+.wrap{
+	width: 90%;
+}
+.main{
+	margin: 6% 0 0%;
+}
+}
+@media all and (max-width:800px) and (min-width:640px){
+.wrap{
+	width: 90%;
+}
+.main{
+	margin: 8% 0 0%;
+}
+}
+@media all and (max-width:640px) and (min-width:480px){
+.wrap{
+	width: 90%;
+}
+h1{
+	text-align: left;
+	font-size: 1.8em;
+}
+.main{
+	margin: 4% 0 0%;
+}
+}
+@media all and (max-width:480px) and (min-width:320px){
+.wrap{
+	width: 90%;
+}
+h1{
+	text-align: left;
+	font-size: 1.4em;
+}
+.main{
+	margin: 3% 0 0%;
+}
+}
+@media all and (max-width:320px){
+.wrap{
+	width: 90%;
+}
+h1{
+	text-align: left;
+	font-size: 1.0em;
+}
+.main{
+	margin: 3% 0 0%;
+}
+p{
+	margin-top:2%;
+	line-height: 1.4em;
+}
+.footer{
+	position: relative;
+	text-align:right;
+	right: 0;
+	bottom:0;
+}
+.footer p{
+	font-size: 0.9em;
+}
+}
+
+a {
+  color: #1abc9c;
+}
+a: hover {
+  color: #2fe2bf;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin: 10px 0;
+}
+h1 {
+  font-size: 180%;
+}
+h2 {
+  font-size: 150%;
+}
+h3 {
+  color: #95A5A6;
+}
+.container {
+  margin: 5px auto;
+  width: 80%;
+}
+.row {
+  margin: 5px 0;
+  padding: 5px;
+}
+button {
+  width: 200px;
+}
+
+.flat-butt {
+  display: inline-block;
+  margin: 0 5px;
+  border-radius: 6px;
+  font-family: "Lato", sans-serif;
+  font-size: 16.5px;
+  padding: 12px 20px;
+  border: 0;
+  background: #34495E;
+  color: #FFF;
+  cursor: pointer;
+  outline: 0;
+}
+.flat-butt:hover {
+  background: #005580;
+}
+.flat-primary-butt {
+  background: #1abc9c;
+}
+.flat-primary-butt:hover {
+  background: #2fe2bf;
+}
+.flat-info-butt {
+  background: #3498db;
+}
+.flat-info-butt:hover {
+  background: #5dade2;
+}
+.flat-danger-butt {
+  background:#EA3D4E;
+}
+.flat-danger-butt:hover {
+  background: #ec7063;
+}
+.flat-border-butt {
+  padding: 8px 20px;
+  border: 4px solid #2C3E50;
+}
+.flat-border-butt:hover {
+  border: 4px solid #2C3E50;
+}
+.flat-primary-border-butt {
+  border-color: #16A085;
+}
+.flat-primary-border-butt:hover {
+  border-color: #27AE60;
+}
+.flat-info-border-butt {
+  border-color: #2980B9;
+}
+.flat-info-border-butt:hover {
+  border-color: #2980B9;
+}
+.flat-danger-border-butt {
+  border-color: #C0392B;
+}
+.flat-danger-border-butt:hover {
+  border-color: #C0392B;
+}
+.flat-double-butt {
+  padding: 8px 20px;
+  border: 3px solid #FFF;
+  box-shadow: #34495E 0px 0px 0px 3px;
+}
+.flat-double-butt:hover {
+  box-shadow: #005580 0px 0px 0px 3px;
+}
+.flat-primary-double-butt {
+  box-shadow: #1abc9c 0px 0px 0px 3px;
+}
+.flat-primary-double-butt:hover {
+  box-shadow: #2fe2bf 0px 0px 0px 3px;
+}
+.flat-info-double-butt {
+  box-shadow: #3498db 0px 0px 0px 3px;
+}
+.flat-info-double-butt:hover {
+  box-shadow: #5dade2 0px 0px 0px 3px;
+}
+.flat-danger-double-butt {
+  box-shadow: #e74c3c 0px 0px 0px 3px;
+}
+.flat-danger-double-butt:hover {
+  box-shadow: #ec7063 0px 0px 0px 3px;
+}
+.flat-underline-butt {
+  text-decoration: underline;
+}
+.flat-grad-butt {
+  background-image: linear-gradient(#34495E 50%, #2C3E50 50%);
+}
+.flat-primary-grad-butt {
+  background-image: linear-gradient(#1ABC9C 50%, #16A085 50%);
+}
+.flat-info-grad-butt {
+  background-image: linear-gradient(#3498DB 50%, #2980B9 50%);
+}
+.flat-danger-grad-butt {
+  background-image: linear-gradient(#E74C3C 50%, #C0392B 50%);
+}
+.flat-inner-butt {
+  padding: 11px 0px;
+  box-shadow: inset #2C3E50 -3px -3px 0px;
+}
+.flat-primary-inner-butt {
+  background: #1ABC9C;
+  box-shadow: inset #16A085 -3px -3px 0px;
+}
+.flat-info-inner-butt {
+  box-shadow: inset #2980B9 -3px -3px 0px;
+}
+.flat-danger-inner-butt {
+  box-shadow: inset #C0392B -3px -3px 0px;
+}
+.flat-outer-butt {
+  padding: 11px 0px;
+  box-shadow: #BDC3C7 2px 2px 0px;
+}
+ a {
+
+    text-decoration: none;
+}
+ a : hover{
+
+    text-decoration: none;
+}
