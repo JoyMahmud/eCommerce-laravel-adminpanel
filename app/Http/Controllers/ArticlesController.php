@@ -23,7 +23,7 @@ class ArticlesController extends Controller
             {
                 return response()->json(array(
                     'error' => false,
-                    'details'=>$data,
+                    'details' => $data,
                     'Message' => "Success"),
                     200
                 );
@@ -45,17 +45,15 @@ class ArticlesController extends Controller
             );
         }
     }
-
     /**
      * Show the form for editing the specified resource.
      * GET /articles/{id}/edit
-     *
      * @param  int  $id
      * @return Response
      */
     public function edit($type)
     {
-        $data['page_title']='Article';
+        $data['page_title'] = 'Article';
         try {
             $data = DB::table('articles')->where('type', $type)->first();
             if(!empty($type))
@@ -69,14 +67,11 @@ class ArticlesController extends Controller
         }
         catch (\Exception $e) {
             return Redirect::to('admin/');
-
         }
     }
-
     /**
      * Update the specified resource in storage.
      * PUT /articles/{id}
-     *
      * @param  int  $id
      * @return Response
      */
@@ -89,7 +84,6 @@ class ArticlesController extends Controller
             $article = DB::table('articles')
                 ->where('id', $id)
                 ->update(['title' => $title,'details' => $details]);
-
             try {
                 $data = DB::table('articles')->where('type', $type)->first();
                 if(!empty($type))
@@ -104,16 +98,15 @@ class ArticlesController extends Controller
             catch (\Exception $e) {
                 return Redirect::to('admin/');
             }
-
         }
         catch (\Exception $e) {
             try {
                 $data = DB::table('articles')->where('type', $type)->first();
-                if($type=='about')
+                if($type == 'about')
                 {
                     return Redirect::to('admin/articles/about/edit')->with('data', $data);
                 }
-                elseif($type=='terms')
+                elseif($type == 'terms')
                 {
                     return Redirect::to('admin/');
                 }

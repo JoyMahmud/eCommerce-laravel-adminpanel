@@ -40,13 +40,10 @@ use Jenssegers\Agent\Agent;
 
 class HomeController extends Controller
 {
-    //
-
     function __construct()
     {
         Session::put('pre_login_url', URL::current());
     }
-
     public function index()
     {
         $data = [];

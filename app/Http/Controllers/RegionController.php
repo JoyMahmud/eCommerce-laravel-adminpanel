@@ -11,73 +11,42 @@ class RegionController extends Controller
 {
     public function index()
     {
-        $data=[];
-
-        $data['page_title']='Region';
-
+        $data = [];
+        $data['page_title'] = 'Region';
         return view('admin.region.index',$data);
     }
-
-
     public function regionData()
     {
-        $regions =Region::orderBy('created_at', 'desc')->select('id','title','created_at');
-
-
+        $regions = Region::orderBy('created_at', 'desc')->select('id','title','created_at');
         return \Datatables::of($regions)
-
             ->addColumn('Action', function($region){
-
-                $html= '
-                <a href="'.route('region_edit', $region->id).'" class="btn bg-olive margin"><i class="fa fa-pencil-square-o"></i>Update</a>
-
-                ';
-
-
+                $html = '
+                <a href = "'.route('region_edit', $region->id).'" class="btn bg-olive margin"><i class="fa fa-pencil-square-o"></i>Update</a>';
                 return $html;
             })
-
             ->make(true);
     }
-
     public function create()
     {
-
-        $data=[];
-        $data['page_title']='Region Create';
+        $data = [];
+        $data['page_title'] = 'Region Create';
         return view('admin.region.create',$data);
     }
-
     public function store(Request $request)
     {
-
-
         $validator=Validator::make($request->all(),[
-
-            'title'=>'required'
-
+            'title' => 'required'
         ]);
-
-
         if($validator->fails())
         {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
-
-
-
-        $data=[
-
-            'title'=>$request->title,
-            'slug'=>str_slug($request->title, "-"),
-
+        $data = [
+            'title' => $request->title,
+            'slug' => str_slug($request->title, "-"),
         ];
-
-
         //dd($data);
         $insert_data=Region::create($data);
-
         if($insert_data)
         {
             return redirect(route('region'))->with('success','new region added successfully');
@@ -86,39 +55,27 @@ class RegionController extends Controller
         {
             return redirect()->back()->with('error','something went wrong ,please try again')->withInput();
         }
-
     }
     public function edit($id)
     {
 
-        $data=[];
-        $details=Region::find($id);
-        $data['page_title']='Region Update';
-        $data['details']=$details;
+        $data = [];
+        $details = Region::find($id);
+        $data['page_title'] = 'Region Update';
+        $data['details'] = $details;
         return view('admin.region.edit',$data);
     }
-
     public function update(Request $request,$id)
     {
-
-
         $validator = Validator::make($request->all(), [
-
             'title' => 'required'
-
         ]);
-
-
         if ($validator->fails()) {
             return redirect()->back()->withErrors($validator)->withInput();
         }
-
-        $region=Region::find($id);
-
-
-        $region->title=$request->title;
-        $update=$region->save();
-
+        $region = Region::find($id);
+        $region->title = $request->title;
+        $update = $region->save();
         if($update)
         {
             return redirect(route('region'))->with('success',' Region update successfully');

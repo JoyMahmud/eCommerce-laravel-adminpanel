@@ -18,11 +18,9 @@ class AdminController extends Controller
      */
     function __construct()
     {
-
         $this->site_title = 'Dashboard';
         $this->middleware('adminAuth');
     }
-
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -33,7 +31,6 @@ class AdminController extends Controller
         $data['page_title'] = 'Login';
         return view('admin.dashboard', $data);
     }
-
     /**
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
@@ -42,12 +39,12 @@ class AdminController extends Controller
         $data = [];
         $data['site_title'] = $this->site_title;
         $data['page_title'] = 'Dashboard';
-        $data['products']=Product::all()->count();
-        $data['sell']=Order::where('payment_status','complete')->sum('subtotal');
-        $data['complete_order']=Order::where('payment_status','complete')->count();
-        $data['incomplete_order']=Order::where('payment_status','pending')->count();
-        $data['unverified_order']=Order::where('payment_status','verification')->count();
-        $data['user']=User::where('role','user')->count();
+        $data['products'] = Product::all()->count();
+        $data['sell'] = Order::where('payment_status','complete')->sum('subtotal');
+        $data['complete_order'] = Order::where('payment_status','complete')->count();
+        $data['incomplete_order'] = Order::where('payment_status','pending')->count();
+        $data['unverified_order'] = Order::where('payment_status','verification')->count();
+        $data['user'] = User::where('role','user')->count();
         return view('admin.dashboard', $data);
     }
 }
