@@ -137,7 +137,7 @@
                     {data: 'payment_status', name: 'payment_status'},
                     {data: 'shipping_status', name: 'shipping_status'},
                     {data: 'created_at', name: 'created_at'},
-                    {data: 'Action', name: 'Action', orderable: false, searchable: false},
+                    {data: 'Action', name: 'Action', orderable: false, searchable: false}
                 ]
             });
         });

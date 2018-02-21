@@ -25,6 +25,7 @@ class CreateTableOrders extends Migration
             $table->enum('payment', ['cash', 'online']);
             $table->enum('payment_status', ['pending', 'complete','verification']);
             $table->integer('payment_activity_id');
+            $table->enum('shipping_status', ['in_progress', 'delivered','cancel']);
             $table->timestamps();
         });
     }

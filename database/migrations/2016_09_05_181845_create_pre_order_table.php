@@ -12,7 +12,7 @@ class CreatePreOrderTable extends Migration
      */
     public function up()
     {
-        Schema::create('pre_order', function (Blueprint $table) {
+        Schema::create('pre_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
             $table->integer('product_id');
