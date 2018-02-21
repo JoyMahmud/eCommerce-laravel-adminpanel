@@ -15,7 +15,7 @@
         <div class="header"><img src="{{asset($logo->option_value)}}" style="width: 29%;height: auto;margin: 0 auto;/*! text-align: center; */display: block;"></div>
         <div class="content">
 
-            <h3>Thank you for ordering on shoppingZoneBD.</h3>
+            <h3>Thank you for ordering on site.</h3>
             <h5>Your order details below here</h5>
 
 
@@ -115,7 +115,7 @@
                 </li>
                 <li style="display:inline-block;vertical-align:middle;padding:5px">
 						<span class="m_4929081088826337892sg-image" style="float:none;display:block;text-align:center">
-							<a href="https://www.facebook.com/shoppingzonebd1" target="_blank">
+							<a href="https://www.facebook.com" target="_blank">
 								<img alt="facebook" src="{{asset('assets/frontend/images/email-template/facebook.png')}}" style="border:0px;width:32px;height:32px" class="CToWUd" width="32" height="32">
 							</a>
 						</span>

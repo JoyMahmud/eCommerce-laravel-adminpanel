@@ -5,7 +5,7 @@
         <div class="header"><img src="{{asset($logo->option_value)}}" style="width: 29%;height: auto;margin: 0 auto;/*! text-align: center; */display: block;"></div>
         <div class="content">
 
-            <h3>Thank you for sigining on shoppingZoneBD.</h3>
+            <h3>Thank you for sigining on site.</h3>
             <h5>Your account details below here</h5>
 
 
