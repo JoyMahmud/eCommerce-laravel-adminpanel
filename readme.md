@@ -1,27 +1,62 @@
-## Laravel PHP Framework
+# Laravel eCommerce Admin Panel
 
-[![Build Status](https://travis-ci.org/laravel/framework.svg)](https://travis-ci.org/laravel/framework)
-[![Total Downloads](https://poser.pugx.org/laravel/framework/d/total.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/v/stable.svg)](https://packagist.org/packages/laravel/framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/framework/v/unstable.svg)](https://packagist.org/packages/laravel/framework)
-[![License](https://poser.pugx.org/laravel/framework/license.svg)](https://packagist.org/packages/laravel/framework)
+    **Version 1.0**
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as authentication, routing, sessions, queueing, and caching.
+An admin panel for managing a eCommerce  website.
 
-Laravel is accessible, yet powerful, providing powerful tools needed for large, robust applications. A superb inversion of control container, expressive migration system, and tightly integrated unit testing support give you the tools you need to build any application with which you are tasked.
+ - The project is taken to Laravel 5.2. so we will migrate this to latest Laravel soon.
 
-## Official Documentation
+# Requirements
 
-Documentation for the framework can be found on the [Laravel website](http://laravel.com/docs).
+> Laravel >=5.2 
+> PHP >= 5.5.9
 
-## Contributing
+## Installation
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+ 1. Clone this repositories
+ 2. Change your database credientials in .env
+ 3. Run migration command `php artisan migrate`
+ 4. Run Seeder command `php artian db:seed`
+ 5. Go to browser and just type  **yourdomain/admin**
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+----------
+**Admin Credientials :**
+Email 				: admin@ecommerce.com
+Password	 	: ecommerce@
 
-### License
+## Features
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+ - Manage slideshow dynamically
+ - Manage category sub-category with ability to category grouping
+ - Create and update products
+ - Can upload product image folder wise in file-manager and use them when you need
+ - Mange Special product offer section dynamically
+ - Manage articles dynamically
+ - Manage shipment and charges dynamically 
+ -  Can view product order details different way like
+ --All order, Complete order, Cash on delivery Order, Pre-orders.
+
+
+----------
+## Changes Note 
+
+
+
+## Upcoming Release 
+
+ - Migrate to laravel 5.5
+ - Feature to manage payment gateway dynamically from admin
+ - Admin user management
+ - Full stack features with front-end
+
+## Special Credits
+
+ - AdminLTE Admin Template
+ - ARCANEDEV/LogViewer
+ - yajra/laravel-datatables
+ - barryvdh/laravel-debugbar
+
+## Author
+
+[Hashibul Hasan](https://www.visualcv.com/hashibulr) :email: [Hire Me](mailto:amarkotha366@gmail.com)
