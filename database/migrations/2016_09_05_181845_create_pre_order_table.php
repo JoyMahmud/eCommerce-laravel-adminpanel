@@ -15,6 +15,7 @@ class CreatePreOrderTable extends Migration
         Schema::create('pre_orders', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
+            $table->string('order_no');
             $table->integer('product_id');
             $table->integer('region_id');
             $table->integer('city_id');
@@ -24,7 +25,9 @@ class CreatePreOrderTable extends Migration
             $table->string('shipping_payable');
             $table->enum('booking_payment', ['cash', 'online']);
             $table->enum('booking-payment_status', ['pending', 'complete','verification']);
+            $table->integer('booking_payment_activity_id');
             $table->integer('payment_activity_id');
+            $table->enum('order_status', ['booking', 'cancled','delivered']);
             $table->timestamps();
         });
     }
