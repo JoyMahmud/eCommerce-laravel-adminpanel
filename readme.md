@@ -14,10 +14,12 @@ An admin panel for managing a eCommerce  website.
 ## Installation
 
  1. Clone this repositories
- 2. Change your database credientials in .env
- 3. Run migration command `php artisan migrate`
- 4. Run Seeder command `php artian db:seed`
- 5. Go to browser and just type  **yourdomain/admin**
+ 2. Create a .env file.
+ 3. Change your database credentials in .env
+ 4. Run command `composer install`
+ 5. Run migration command `php artisan migrate`
+ 6. Run Seeder command `php artian db:seed`
+ 7. Go to browser and just type  **yourdomain/admin**
 
 
 ----------
@@ -27,7 +29,7 @@ Password	 	: ecommerce@
 
 ## Features
 
- - Manage slideshow dynamically
+ - Manage sideshow dynamically
  - Manage category sub-category with ability to category grouping
  - Create and update products
  - Can upload product image folder wise in file-manager and use them when you need
